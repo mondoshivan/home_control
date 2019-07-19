@@ -9,12 +9,6 @@ html lang="en"
     // Styles
     link rel="stylesheet" href="css/reset.css"
     link rel="stylesheet" href="styles.css" media="screen, projection"
-    link href="css/jquery-ui-1.12.1-themes-base.css" media="screen, projection" rel="stylesheet"
-
-    // Libraries
-    script src="js/jquery-1.8.2.min.js"
-    script src="js/jquery-ui-1.12.1.js"
-    script src="js/basic.js"
 
   body
     article
@@ -22,3 +16,5 @@ html lang="en"
       main
         == styled_flash
         == yield
+
+  script data-main="js/require_config" src="js/lib/require-2.3.6.js"
