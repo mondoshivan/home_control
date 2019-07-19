@@ -4,6 +4,7 @@
 import tsModule = require("app/ts_module/module");
 import * as $ from 'jquery';
 import 'jqueryui';
+import * as angular from 'angular';
 
 export function start() {
     // Use a legacy js module:
@@ -24,4 +25,12 @@ export function start() {
         alert('asdf');
         event.preventDefault();
     });
+
+    angular.module(
+        'newModule',
+        []
+    ).controller(
+        'controller',
+        function() {}
+        );
 }

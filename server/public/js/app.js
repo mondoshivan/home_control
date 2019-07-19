@@ -1,6 +1,6 @@
 /// <amd-dependency path="legacyJs"/>
 /// <amd-dependency path="app/js_module/module"/>
-define(["require", "exports", "app/ts_module/module", "jquery", "legacyJs", "app/js_module/module", "jqueryui"], function (require, exports, tsModule, $) {
+define(["require", "exports", "app/ts_module/module", "jquery", "angular", "legacyJs", "app/js_module/module", "jqueryui"], function (require, exports, tsModule, $, angular) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     function start() {
@@ -19,6 +19,7 @@ define(["require", "exports", "app/ts_module/module", "jquery", "legacyJs", "app
             alert('asdf');
             event.preventDefault();
         });
+        angular.module('newModule', []).controller('controller', function () { });
     }
     exports.start = start;
 });
