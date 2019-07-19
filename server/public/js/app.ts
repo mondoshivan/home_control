@@ -1,7 +1,9 @@
 /// <amd-dependency path="legacyJs"/>
 /// <amd-dependency path="app/js_module/module"/>
 
-import tsmodule = require("app/ts_module/module");
+import tsModule = require("app/ts_module/module");
+import * as $ from 'jquery';
+import 'jqueryui';
 
 export function start() {
     // Use a legacy js module:
@@ -14,5 +16,12 @@ export function start() {
     moduleJs.newJsFunction("what newjs");
 
     // Use a typescript module: tsc makes this effortless
-    tsmodule.tsmoduleFunction("what ts");
+    tsModule.tsmoduleFunction("what ts");
+
+    // JQuery UI
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+        alert('asdf');
+        event.preventDefault();
+    });
 }
