@@ -24,6 +24,11 @@ class Controller < Sinatra::Base
     logger.level = Logger::DEBUG if development?
     set :logger, logger
     enable :logging
+
+    set :require_lib, development? ? 'js/lib/require-2.3.6.js' : 'js/lib/require-min-2.3.6.js'
+    set :require_main, development? ? 'js/require_dev_config' : 'js/require_config'
+
+    logger.info "development? #{development?}"
   end
 
   configure :development do

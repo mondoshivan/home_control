@@ -17,6 +17,8 @@ IP=127.0.0.1
 export APP_ENV=$MODE
 export SINATRA_CONFIG_FILE="${PWD}/${CONFIG_FILE}"
 
+env
+
 # start the server
 echo "access: http://${IP}:${PORT}"
 rackup -p $PORT -o $IP

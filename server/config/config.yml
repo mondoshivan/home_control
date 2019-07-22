@@ -1,5 +1,5 @@
 server: thin
-home_control_log_file: /var/log/home_control/net.steinberg.notary_service.log
+home_control_log_file: /var/log/home_control/home_control.log
 views: views
 js: public
 css: css

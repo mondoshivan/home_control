@@ -9,13 +9,13 @@ html lang="en"
     // Styles
     link rel="stylesheet" href="css/reset.css"
     link rel="stylesheet" href="styles.css" media="screen, projection"
-    link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    link rel="stylesheet" href="css/jqueryui-min-1.12.1.css"
 
   body
     article
 
-      main
+      div ng-controller="myController"
         == styled_flash
         == yield
 
-  script data-main="js/require_config" src="js/lib/require-2.3.6.js"
+    script data-main="#{settings.require_main}" src="#{settings.require_lib}"
