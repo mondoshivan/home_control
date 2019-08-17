@@ -1,8 +1,9 @@
 FROM ruby:2.4.6
 
-WORKDIR /usr/src/app
-
+RUN mkdir -p /usr/src/app
 COPY server /usr/src/app
+
+WORKDIR /usr/src/app
 
 EXPOSE 9191
 
