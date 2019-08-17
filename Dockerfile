@@ -1,7 +1,9 @@
-FROM erikap/ruby-sinatra
+FROM ruby:2.4.6
+
+WORKDIR /usr/src/app
 
 COPY server /usr/src/app
 
-ENV MAIN_APP_FILE /usr/src/app/lib/home_control.rb
+EXPOSE 9191
 
 CMD ["/bin/bash", "/startup.sh"]
