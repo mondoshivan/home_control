@@ -1,1 +1,15 @@
-| {{ message }}
+
+p Rows to display:
+input type="number" step="1" min="0" max="12" ng-model="rowLimit"
+
+table
+  thead
+    tr
+      th Vorname
+      th Nachname
+  tbody
+    tr ng-repeat="player in players | limitTo:rowLimit"
+      td
+        | {{ player.firstName }}
+      td
+        | {{ player.secondName }}
