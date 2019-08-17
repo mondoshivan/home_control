@@ -8,4 +8,4 @@ RUN bundle install
 
 EXPOSE 9191
 
-CMD ["/bin/bash", "./start_server.sh"]
+CMD ["/bin/bash", "./start_server.sh", "9191", "production", "config/config.yml"]
