@@ -11,13 +11,11 @@ cd "$(dirname "$0")"
 bundle install
 
 # get arguments
-IP=127.0.0.1
+IP=0.0.0.0
 
 # prepare environment
 export APP_ENV=$MODE
 export SINATRA_CONFIG_FILE="${PWD}/${CONFIG_FILE}"
-
-env
 
 # start the server
 echo "access: http://${IP}:${PORT}"
