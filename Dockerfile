@@ -6,4 +6,4 @@ COPY server /usr/src/app
 
 EXPOSE 9191
 
-CMD ["/bin/bash", "/startup.sh"]
+CMD ["/bin/bash", "./startup.sh"]
